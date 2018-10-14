@@ -1,9 +1,9 @@
-/*
+
 function generateRandomNumberFromRange( s, e ) {
     const random = s + Math.floor( Math.random() * (e-s+1) );
     return random;
 }
-*/
+
 
 /*
     @func generateTrafficLight
@@ -35,8 +35,8 @@ function generateTrafficLight(numRandom) {
     @example generateRandomPhoneNumber(); // "1-718-786-2825"
 */
 function generateRandomPhoneNumber() {
-    const randomThreeDigit = (Math.floor(Math.random() * 899) + 100);
-   const randomFourDigit = (Math.floor(Math.random() * 8999) + 1000) ;
+    const randomThreeDigit = generateRandomNumberFromRange(100, 999)
+   const randomFourDigit = generateRandomNumberFromRange(1000, 9999)
      return `${1}-${randomThreeDigit}-${randomThreeDigit}-${randomFourDigit}`
    }
   console.log(generateRandomPhoneNumber())
@@ -50,7 +50,11 @@ function generateRandomPhoneNumber() {
     
     @example generateRandomRGB(); // "rgb(255, 123, 0)"
 */
-
+function generateRandomRGB() {
+    const randomThreeDigit = generateRandomNumberFromRange(100, 999)
+  return `rbg(${randomThreeDigit}, ${randomThreeDigit}, ${0})`
+  }
+  console.log(generateRandomRGB())
 /*
     @func generateLottoTicket
     @returns {string}
