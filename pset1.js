@@ -34,7 +34,12 @@ function generateTrafficLight(numRandom) {
             
     @example generateRandomPhoneNumber(); // "1-718-786-2825"
 */
-
+function generateRandomPhoneNumber() {
+    const randomThreeDigit = (Math.floor(Math.random() * 899) + 100);
+   const randomFourDigit = (Math.floor(Math.random() * 8999) + 1000) ;
+     return `${1}-${randomThreeDigit}-${randomThreeDigit}-${randomFourDigit}`
+   }
+  console.log(generateRandomPhoneNumber())
 /*
     @func generateRandomRGB
     @returns {string}
