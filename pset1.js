@@ -67,7 +67,13 @@ function generateRandomRGB() {
     
     @example generateLottoTicket(); // L 9 11-28
 */
-
+ function generateLottoTicket() {
+   const firstTry = generateRandomNumberFromRange(0,10)
+   const secondTry = generateRandomNumberFromRange(0,15)
+   const thirdTry = generateRandomNumberFromRange(0,30)  
+   return `L ${firstTry} ${secondTry}-${thirdTry}`
+ }
+ console.log(generateLottoTicket())
 /*
     @func generatePhoneNumberWithAreaCode
     @param {number} areaCode
